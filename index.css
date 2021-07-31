@@ -1,0 +1,535 @@
+
+@font-face {
+    font-family: navbar;
+    src: url(font/Oxanium/Oxanium-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: cover-title;
+    src:url(font/Bungee_Outline/BungeeOutline-Regular.ttf)
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    text-transform: uppercase;
+    /* font-family: navbar; */
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    max-width: 100%;
+    background-color: black;
+}
+
+
+.main-container{
+    width: 100%;
+    /* background-color: rgb(0, 0, 0); */
+   
+   
+}
+
+.Cover-block{
+    
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  
+
+}
+
+
+.navbar{
+    font-family: navbar;
+    background-color: rgb(28, 28, 32);
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1.5px solid rgb(0, 179, 179);
+    width: 100%;
+    position: relative;
+    padding: 0 2vw;
+    
+}
+
+
+
+
+.navitem{
+    list-style: none;
+    margin: 0 1vw;
+    align-self: center;
+    position: relative;
+    padding:4.2vh 0;
+    /* border: 1px solid black; */
+    font-size: clamp(10px,15px,25px);
+    
+    
+   
+}
+
+.navitem a{
+    color: rgb(0, 179, 179);
+}
+
+.navitem::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+   
+}
+
+.navitem:hover::after{
+    transform: scaleX(1);
+    transition: transform 250ms ease-in-out;
+    color: white;
+}
+
+.navitem:hover a{
+    color: white;
+    text-shadow: .5px .5px 1px white;
+}
+
+#nav-logo{
+    
+    object-fit: contain;
+    margin-right: auto;
+    /* border: 2px solid wheat; */
+    
+    
+}
+#backgroundclip{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+   
+    
+}
+
+.cover-title{
+    width: 100%;
+    height: calc(100vh - 8.4vh);
+    /* border: 1px solid rgb(189, 138, 45); */
+    font-family: cover-title;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    
+   
+    
+    
+
+}
+
+.cover-title h1{
+    font-weight: 100;
+    font-size: calc(20px + 6vw);
+    line-height: 90px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    width: 100%;
+    text-align: center;
+    margin: 5% 0;
+
+}
+
+.cover-button{
+    border: 1px solid rgb(172, 221, 219);
+    width: fit-content;
+    padding: 1vw 3vw;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: calc(20px + .5vw);
+    align-self: center;
+    margin-top:15%;
+    transition: all 300ms ease;
+}
+.cover-button:hover{
+    box-shadow:inset 0px 0px 10px 5px rgb(0, 225, 255),0px 0px 10px 5px rgb(0, 217, 255);
+    border:1px solid rgb(0, 255, 242);
+    color: rgb(0, 238, 255);
+
+}
+
+#toggle-logo{
+    display: none;
+}
+#cover-logo-check{
+    display: none;
+}
+
+.recent-post-block{
+    width: 100%;
+    padding: 4vw;
+    font-family: navbar;
+    display: flex;
+    flex-direction: column;
+    
+}
+.RP-title{
+    text-align: center;
+    margin: 2vw 0;
+   
+    font-size: calc(15px + 1.5vw);
+}
+.indie-post-block{
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.indie-block{
+    background-color: rgb(28, 28, 32);
+    padding: 1vw;
+    height: 300px;
+    min-width: 250px;
+    font-size: calc(10px + .2vw);
+    flex: 0 1 20%;
+}
+.RP-Head{
+    margin:1vw 0;
+    
+    line-height: 30px;
+    transition: all 250ms ease-in-out;
+}
+.RP-Head:hover{
+    color: rgb(0, 179, 179);
+    cursor:pointer;
+}
+.RP-desc{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: calc(12px + .2vw);
+    margin: 1vw 0;
+    letter-spacing: 1px;
+
+}
+.RP-link{
+    font-family: sans-serif;
+    color: rgb(0, 179, 179);
+    font-size: calc(10px + .3vw);
+}
+.RP-button{
+    border: 1px solid rgb(172, 221, 219);
+    width: fit-content;
+    padding: 1vw 3vw;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: calc(15px + .5vw);
+    align-self: center;
+    transition: all 300ms ease;
+    margin: 2vw 0;
+
+}
+.RP-button:hover{
+    box-shadow:inset 0px 0px 10px 5px rgb(0, 225, 255),0px 0px 10px 5px rgb(0, 217, 255);
+    border:1px solid rgb(0, 255, 242);
+    color: rgb(0, 238, 255);
+    
+   
+}
+.short-para-block{
+    width: 100%;
+    padding: 1vw;
+    background-image: url(Images.svgs.pngs/SP-block.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+}
+.SP-head{
+    font-family: navbar;
+    text-align: center;
+    font-size: calc(20px + 1vw);
+    margin: 3vw 0;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.SP-body{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: calc(15px + .1vw);
+    font-weight: 50;
+    padding: 0 10%;
+    text-align: center;
+    text-transform: capitalize;
+}
+.SP-body span{
+    color: rgb(66, 201, 201);
+    text-transform: capitalize;
+    font-size: calc(15px + .1vw);
+}
+.SP-button{
+    border: 1px solid rgb(172, 221, 219);
+    width: fit-content;
+    padding: 1vw 3vw;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: calc(20px + .3vw);
+    align-self: center;
+    transition: all 300ms ease;
+    margin: 4vw 0;
+    display: inline-block;
+}
+.SP-button:hover{
+    box-shadow:inset 0px 0px 10px 5px rgb(0, 225, 255),0px 0px 10px 5px rgb(0, 217, 255);
+    border:1px solid rgb(0, 255, 242);
+    color: rgb(0, 238, 255);
+
+}
+.partner-block{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 5vw;
+    justify-content: center;
+    font-family: navbar;
+    
+}
+.P-head{
+    text-align: center;
+    margin: 5vw 0;
+    flex: 1 0 100%;
+   
+}
+.P-indie{
+    flex: 1 1 30%;
+    max-width: 300px;
+    /* border: 1px solid white; */
+    padding:1vw  2vw;
+    max-height: 300px;
+    transition: all 250ms ease-in-out;
+    
+}
+
+.P-indie img{
+    width: 100%;
+    padding: 1vw;
+    height: 50%;
+    object-fit: contain;
+}
+.P-indie h2{
+    margin-bottom: 2vw;
+    color: rgb(52, 235, 235);
+    text-align: center;
+    cursor: pointer;
+    font-weight: 100;
+    font-size: calc(15px + .2vw);
+}
+.P-indie p{
+    font-family:  Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+.P-indie a{
+    color: rgb(52, 235, 235);
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    text-align: center;
+    margin: 1vw  0;
+}
+
+.P-indie:hover{
+    background-color: rgb(28, 28, 32);
+}
+.connect-block{
+    width: 100%;
+    text-align: center;
+    font-family: navbar;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5vw 5vw 5vw;
+    /* gap: 1vw; */
+    background-image: url(Images.svgs.pngs/SP-block.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.connect-block h2{
+    letter-spacing: 2px;
+    font-size: calc(20px + 1vw);
+    flex:1 0 100% ;
+    margin: 5vw 0 ;
+
+
+
+}
+.connect-indie{
+    flex: 1 0 200px;
+    padding: 1vw;
+    height: 200px;
+    /* border: 1px solid rgb(255, 255, 255);   */
+    transition: all 250ms ease-in-out;
+   
+}
+.connect-indie h4{
+    color: rgb(0, 217, 255);
+    margin-top: 1vw;
+    text-transform: capitalize;
+}
+
+.connect-indie img{
+    height: 80%;
+    object-fit: contain;
+}
+
+.connect-indie:hover{
+    background-color: rgb(28, 28, 32);
+}
+
+.footer-links{
+    width: 100%;
+    display: flex;
+    background-color: rgb(28, 28, 32);
+    font-family: navbar;
+    border-top: 1px solid rgb(0, 225, 255);
+    padding: 3vmax 0;
+    gap: 1vmax;
+    flex-wrap: wrap;
+}
+
+.footer-indie{
+    display: flex;
+    flex-direction: column;
+    flex:1 1 30%;
+    padding:0 3vmax;
+    
+}
+
+.footer-indie h3{
+    margin-bottom: 2vw;
+}
+
+.footer-indie a{
+    color: rgb(0, 217, 255);
+    margin: .5vmax 0;
+    text-transform: capitalize;
+}
+
+.footer-indie input{
+    border: 1px solid rgb(0, 217, 255);
+    outline: none;
+    width: 100%;
+    height: 35px;
+    margin: 5vw 2vw 0 0;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    background-color: transparent;
+}
+
+.footer-indie input::-webkit-input-placeholder{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+.footer-declaration{
+    flex:1 0 100%;
+    padding:35px;
+    /* border: 1px solid rebeccapurple; */
+   
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+.footer-declaration p{
+    text-transform: capitalize;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-declaration a{
+    color: rgb(0, 217, 255);
+    text-transform: capitalize;
+}
+
+.logos{
+    display: flex;
+    height:100px;
+    
+    padding: 2vw 0;
+    /* border: 1px solid grey; */
+    
+  
+}
+.logos  img{
+    height: 100%;
+    width: 100%; 
+    object-fit: contain;
+    /* border: 1px solid grey; */
+    cursor: pointer;
+    /* margin-left:1vw; */
+  
+
+
+}
+
+
+@media only screen and (max-width:850px){
+    #toggle-logo{
+        display: block;
+        padding: 2vw;
+        height: 8.4vh;
+        filter: invert(1);
+        
+       
+    }
+    #toggle-logo-label{
+        height: 100%;
+        justify-self: center;
+        /* border: 1px solid white; */
+    }
+    .navbar{
+        flex-wrap:wrap ;
+        gap: 2vw;
+      
+       
+    }
+    .navitem::after{
+        display: none;
+    }
+    .navitem{
+        padding: 1vw;
+        width: 100%;
+        display: none;
+       
+    }
+
+    #cover-logo-check:checked ~ .navitem{
+        display: flex;
+        
+
+    }
+
+    .indie-block{
+        padding: 5vmax;
+        flex-grow:1 ;
+    }
+    .indie-post-block{
+        gap: 5vw;
+    }
+    .SP-body{
+        text-align: justify;
+       
+    }
+    .P-indie{
+        flex: 1 1 100%;
+        max-width: none;
+    }
+    .footer-indie{
+        flex-wrap: wrap;
+        min-width: 250px;
+        text-align: center;
+    }
+  
+}

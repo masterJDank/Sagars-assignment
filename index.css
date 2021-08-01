@@ -529,7 +529,7 @@ body{
     .footer-indie{
         flex-wrap: wrap;
         min-width: 250px;
-        text-align: center;
+        text-align: left;
     }
   
 }
